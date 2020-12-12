@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col">
+                <img src="https://www.logolynx.com/images/logolynx/14/149ee5051bf63336ae35fc545b45e3e8.jpeg"
+                    alt="friendsbanner" class="banner">
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+              <div id="highscore" class="nav-item nav-link"> View High Scores</div>
+              <h1 id="navbar-title">Friends Quiz</h1>
+              <table id=timer>
+                <tr>
+                  <td id="timer-text"> Timer: </td>
+                  <td> <span id="gameTimer" class="nav-item"></span> </td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </nav>
+    <section class="container">
+        <h2 class="heading">This game is timed!</h2>
+        <p class="instructions">
+            Instructions: You will have 60 seconds to answer all 10 questions correctly. If you get one wrong, 10 seconds will be taken off your time. If you get one correct, it will add 5 seconds to your time. Your remaining time after all questions answered will be your final score.
+        </p>
+        <button id="playBtn" class="btn btn-secondary">PLAY!</button>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
