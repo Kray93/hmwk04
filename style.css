@@ -36,3 +36,12 @@ body {
   background-color: black;
   
 }
+.answerButtons, .highscoreScreen {
+  padding: auto;
+  background-color: white;
+  border: 5px solid black;
+  margin: 50px 30px;
+}
+#timer {
+  color: white;
+}
