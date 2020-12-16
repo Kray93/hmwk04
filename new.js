@@ -10,7 +10,7 @@ var answer2 = document.querySelector("#answer2");
 var answer3 = document.querySelector("#answer3");
 var answer4 = document.querySelector("#answer4");
 var answerButtons = document.querySelector(".answerButtons");
-var answerBtn = document.querySelector(".btn");
+var answerBtn = document.querySelectorAll(".btn");
 var showQuestion = document.querySelector(".question");
 var highscoreScreen = document.querySelector(".highscoreScreen");
 var scores = document.querySelector(".scores")
@@ -76,6 +76,15 @@ function quiz() {
     questDisplay(0)
 
 };
+answerButtons.addEventListener("click", function (event) {
+    console.log("any answer clicked");
+    if (event.target.textContent == questions[questCounter].answer) {
+        correct()
+    } else {
+        wrong()
+    }
+    console.log(event);
+});
 function questDisplay(questCounter) {
     showQuestion.textContent = questions[questCounter].title
     answerButtons.style.display = "block"
@@ -83,15 +92,7 @@ function questDisplay(questCounter) {
     answer2.textContent = questions[questCounter].options[1]
     answer3.textContent = questions[questCounter].options[2]
     answer4.textContent = questions[questCounter].options[3]
-    answerButtons.addEventListener("click", function (event) {
-        console.log("any answer clicked");
-        if (event.target.textContent == questions[questCounter].answer) {
-            correct()
-        } else {
-            wrong()
-        }
-        console.log(event);
-    });
+    
 }
 function correct() {
     questCounter++
